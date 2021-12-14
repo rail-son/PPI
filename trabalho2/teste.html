@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Página Principal</title>
+        <style>
+            body {
+                background-image: url("Trabalho2-CSS/background.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                
+            }
+            header{
+                width: 100%;
+                background-color: #555;
+                color: #dddddd;
+                padding-top: 4px;
+                margin: 0;
+                text-align: center;
+                position: fixed;
+                top: 0;
+            }
+            h1.destacado{
+                
+                color: blue;
+                text-transform: uppercase;
+            }
+            p.destacado{
+                color:crimson;
+                font-style: italic;
+            }
+            nav{
+                color: #555;
+                background-color: #ccc;
+                padding: 5px;
+                text-align: center;
+                
+                
+            }
+            main {
+                background-color: #eeeeee;
+                width: 58%;
+                margin: 0 auto;
+                padding: 2em 5%;
+                
+                border: 1px solid rgb(185, 184, 184);
+                position: static;
+                margin-top: 4em;                
+            }
+            div > input{
+                padding: 5px;
+                border: 2px solid rgb(190, 190, 190);
+
+                width: 60%;
+                min-width: 250px;
+                max-width: 350px;
+                border-radius: 5px;
+                outline-color:  blue;
+               
+            }
+
+           
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Faculdade de Computação da UFU</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+            <h1>A FACOM</h1>
+            <p>A Faculdade de Computação (FACOM) da Universidade Federal de Uberlândia foi criada em 2000, a partir do extinto Departamento de Informática (DEINF), criado em 1988, no âmbito do CETEC.
+            <p>No início dos anos 2000 foi criado na Faculdade o Programa de Pós-Graduação em Ciência da Computação.</p>
+            </p>
+            <h2>Cursos de Graduação</h2>
+            <p>A FACOM oferece os cursos de Bacharelado em Ciência da Computação, em Uberlândia, e Bacharelado em Sistemas de Informação, em Uberlândia e Monte Carmelo.            
+            </p>
+            <h2>Cursos de Pós-Graduação</h2>
+            <p>A FACOM oferece também os cursos de Mestrado Acadêmico e Doutorado em Ciência da Computação.</p>
+        </main>
+        
+
+
+
+        <form action="login.php" method="post">
+            <div >
+                <label for="usuario">Usuário:</label>
+                <br>
+                <input type = "text" id="usuario" name="usuario">
+            </div>
+            <div>
+                <label for="senha">Senha:</label>
+                <br>
+                <input type="password" id="senha" name="senha">
+            </div>
+        <button>Enviar</button>   
+        </form>
+        
+        <p>Parágrafo não afetado</p>
+        <h1 class="destacado">Puta que pariu</h1>
+        <p>Olá</p>
+        <p class="destacado">aula</p>
+        <p>Mundo</p>
+        <p>Eu sou seu professor</p>
+        <p class="destacado">E nesse video</p>
+        
+    </body>
+</html>

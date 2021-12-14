@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+    <head>
+        <title>Contato</title>
+        <meta charset="utf-8">
+        <style>
+            input{
+                margin: 10px;
+            }
+            input::placeholder{
+                color: red;
+                font-size: 12px;
+            }
+            .validador:invalid + span::after{
+                content: '✖';
+                color: red;
+            }
+            .validador:valid + span::after{
+                content: '✓';
+                color: limegreen;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Contato</h1>
+            <hr>
+        </header>
+        <nav>
+            <h2>Menu de Navegação</h2>
+            <ul>
+                    <li><a href="index.html">INÍCIO</a></li>
+                    <li><a href="galeria.html">GALERIA</a></li>
+            </ul>
+            <hr>
+        </nav>
+        <main>
+            <form action="login.php" method="get" autocomplete="off">
+                <h2>Fomulário para Contato</h2>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input class="validador" type = "text" id="nome" name="nome" 
+                            placeholder="Digite seu nome" required minlength="6">
+                            <span></span>
+                    </div>
+                    <br>
+                    <div>
+                        <label for=email>Email: </label>
+                        <input class="validador" type ="email" id="email" name="email"
+                            placeholder="Digite seu email" required>
+                            <span></span>
+                    </div>
+                    <br>
+                    <div>
+                        <label for ="idade">Idade: </label>
+                        <input class="validador" type = "number" id="idade" name="idade"
+                            placeholder="Informe sua idade" min="18" required>
+                            <span></span>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="telefone">Telefone: </label>
+                        <input  class="validador"  type="tel" id="telefone" name="telefone"
+                            placeholder="Digite seu telefone" required>
+                            <span></span>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="data">Data de Nascimento: </label>
+                        <input type="date" id="data">
+                    </div>
+                    <br>
+                    <div>
+                        <p>Qual o seu sexo?</p>
+                        <div>
+                            <input type="radio" id="masculino" name="sexo" value="masc">
+                            <label for="masculino">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="feminino" name="sexo" value="fem">
+                            <label for="feminino">Feminino</label>
+                        </div>
+                        <div>
+                            <input type = "radio" id="naoinf" name="sexo" value="naoinformado">
+                            <label for="naoinf">Prefiro não informar</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <p>Estado Civil:</p>
+                        <div>
+                            <input type="radio" id="solteiro" name="estadocivil" value="solteiro">
+                            <label for="solteiro">Solteiro</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="casado" name="estadocivil" value="casado">
+                            <label for="casado">Casado</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="divorciado" name="estadocivil" value="divorciado">
+                            <label for = "divorciado">Divorciado</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Dados da Empresa</legend>
+                    <div>
+                        <label for=cnpj>CNPJ: </label>
+                        <input type="text" pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" id="cnpj" name="cnpj"
+                        placeholder="Digite seu CNPJ">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="razao">Razão Social: </label>
+                        <input type="text" id="razao" name="razao"
+                        placeholder="Digite sua razão social ">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="ramo">Ramo de atuação: </label>
+                        <input type="text" id="ramo" name="ramo"
+                        placeholder="Digite o ramo em que atua">
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <div>
+                        <label for="cep">CEP: </label>
+                        <input class="validador"  type="text" pattern="\d{5}-\d{3}" id="cep" name="cep" 
+                        placeholder = "Digite seu CEP" required>    
+                        <span></span>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="tipologradouro">Tipo de logradouro: </label>
+                        <select class="validador" name="tipologradouro" id="tipologradouro" required>
+                            <option value="">Selecione</option>
+                            <option value="alameda">Alameda</option>
+                            <option value="avenida">Avenida</option>
+                            <option value="chácara">Chácara</option>
+                            <option value="colônia">Colônia</option>
+                            <option value="condomínio">Condomínio</option>
+                            <option value="conjunto">Conjunto</option>
+                            <option value="distrito">Distrito</option>
+                            <option value="estação">Estação</option>
+                            <option value="estrada">Estrada</option>
+                            <option value="favela">Favela</option>
+                            <option value="fazenda">Fazenda</option>
+                            <option value="largo">Largo</option>
+                            <option value="loteamento">Loteamento</option>
+                            <option value="morro">Morro</option>
+                            <option value="Outro">Outros</option>
+                            <option value="parque">Parque</option>
+                            <option value="praça">Praça</option>
+                            <option value="quadra">Quadra</option>
+                            <option value="recanto">Recanto</option>
+                            <option value="residencial">Residencial</option>
+                            <option value="rodovia">Rodovia</option>
+                            <option value="rua">Rua</option>
+                            <option value="setor">Setor</option>
+                            <option value="sítio">Sítio</option>
+                            <option value="vale">Vale</option>
+                            <option value="viaduto">Viaduto</option>
+                            <option value="vila">Vila</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <br>
+                    <div>
+                       <label for="logradouro">Logradouro: </label>
+                       <input class= 'validador' type="text" id="logradouro" name="logradouro" required
+                            placeholder="Informe seu logradouro">
+                            <span></span>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="cidade">Cidade: </label>
+                        <input class = 'validador' type="text" id="cidade" name="cidade" required
+                        placeholder="Informe sua cidade">
+                        <span></span>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="estado">Estado: </label>
+                        <input class = 'validador' type="text" id="estado" name="estado" required
+                        placeholder="Informe seu estado">
+                        <span></span>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Descrição detalhada do interesse</legend>
+                    <div>
+                        <label for="interesses">Descreva um texto de no máximo 1500 caracteres sobre seus interesses: </label>
+                        <br>
+                        <textarea name="interesses" rows="10" cols="60" maxlength="1500" 
+                        placeholder="Meus interesses..." id="interesses"></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Outro</legend>
+                        <div>
+                            <p>Linguagens de programação utilizadas em sua empresa:</p>
+                            <div>
+                                <input type="checkbox" id="php" name="php[]" value="pqp">
+                                <label for="php">PHP</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="html" name="html[]" value="html">
+                                <label for="html">HTML</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="python" name="python[]" value="python">
+                                <label for="python">PYTHON</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="outras" name="outras[]" value="outras">
+                                <label for="outras">OUTRAS</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <p>Nível de aprendizado do idioma inglês:</p>
+                            <div>
+                                <div>
+                                    <input type="radio" id="basico" name="idioma" value="basico">
+                                    <label for="basico">Básico ou Nulo.</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="intermediario" name="idioma" value="intermediario">
+                                    <label for="intermediario">Intermediário(leitura e/ou fala).</label>
+                                </div>
+                                <div>
+                                    <input type = "radio" id="avancado" name="idioma" value="avancado">
+                                    <label for="avancado">Avançado</label>
+                                </div>
+                            </div>
+                        </div>
+                </fieldset>
+                <br>
+
+                <button>Enviar</button>
+                <input type="reset" value="Limpar">
+            </form>
+        </main>
+        <footer><p>Copyright © 2021 - Todos os direitos reservados.</p>
+		</footer>
+
+    </body>
+</html>

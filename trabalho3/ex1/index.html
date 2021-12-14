@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 1</title> <!--Definição do titúlo da página.-->
+        <style>
+            body
+            {
+              font-family: "Helvetica neue", Helvetica, Arial, sans-serif;
+              line-height: 1.5rem; /*espaçamento das linhas*/
+              background-image: url("../images/background.jpg"); /*fundo da página */
+              background-size: cover; /*cobrir toda a página */
+              margin: 0; /*define a margem da página como 0*/
+              padding: 30px; /*define o padding como 30 px para o body*/      
+            }
+
+            .modal /*classe modal utilizada no div*/
+            {
+              background-color: #0006; /*definidindo a opacidade do background*/
+              display: none; /*definindo o display para não ser exibido antes do click*/
+              width: 100%; /*define o width como 100% para ocupar toda a página*/
+              height: 100%; /*define o height como 100% para ocupar toda a página*/
+
+              position: fixed; /*Define a opção do modal como fixada para que ela se mantenha fixa independente da rolagem da página*/
+              top: 0; /*determinando a posição do background zerando a posição*/
+              left: 0; /*determinando a posição do background zerando a posição*/
+
+              overflow: auto; /*determina se necessário utilizar barra de rolagem*/
+              z-index: 1; /*Ordem de empilhamento definindo prioridade a ser exibida*/
+          }
+
+            .modalContent /* definindo desing da caixa*/
+            {
+              background-color: #eee; /*cor do fundo*/
+              margin: auto; /*margin definida automática*/
+              padding: 20px; /*padding de 20 px*/
+              border: 0.5px solid #aaa; /*definindo a borda da caixa*/
+              box-shadow: 0 0 5px #333; /*definindo a sombra em volta do elemento*/
+
+              /*definindo tamanho da caixa*/
+              width: 50%; 
+              /*definindo a posição que a caixa irá ocupar*/
+              position: absolute; 
+              top: 50%; 
+              left: 50%; 
+              transform: translate(-50%, -50%); 
+            }
+
+            .modalContent button
+            {
+              width: 100%;/*define o tamanho do botão*/
+              background-color: rgb(179, 213, 235); /*cor de fundo*/
+              border-radius: 2px; /*curvatura do botão*/
+              border: 1px solid rgb(159, 200, 255); /*definições da borda*/
+              padding: 5px; /*tamanho do padding*/
+              cursor: pointer; /*mudança do ponteiro*/
+              outline: none; /*definindo contorno*/
+            }
+
+            .modalContent button:hover /*definindo a mudança ao passar o mouse por cima do botão de dentro do modal*/
+            {
+              background-color: rgb(200,223,243);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>A FACOM</h1>
+            
+            <p>A Faculdade de Computação (FACOM) da 
+            Universidade Federal de Uberlândia for criada em 2000, 
+            a partir do extinto Departamento de Informática (DEINF), 
+            criado em 1988 no âmbito do CETEC.</p>
+            <p>No início dos anos 2000 foi criado na Faculdade o 
+            Programa de Pós Graduação em Ciência da Computação.</p>
+            
+            <button type="button" id="btnOpenModal">Abrir Modal</button>
+        </main>
+        
+        <div id="modalTeste" class="modal">
+
+            <div class="modalContent">
+                <h2>Olá! Seja bem vindo!</h2>
+                
+                <button class="buttonClose">Ok</button>
+            </div>
+
+        </div>
+
+        <script>
+            window.onload = function(){ //ao iniciar o site executa a função anônima a baixo
+                const modal = document.querySelector(".modal") // variavel recebe o objeto da do div que está a classe
+                const buttonClose = modal.querySelector(".buttonClose") // variavel recebe a seleção do botão de fechar o modal.
+
+                buttonClose.addEventListener("click", function(){ //define o evento e informa a função anônima ao clicar no botão de fechar o modal
+                    modal.style.display = 'none' //define o display como none para o modal suma ao clicar.
+                })
+
+                const buttonOpenModal = document.getElementById("btnOpenModal") // variavel receve o objeto doid do botão de abrir o modal
+                buttonOpenModal.addEventListener("click", function(){ //define o evento e informa a função anônima ao clicar no botão de abrir.
+                    modal.style.display = 'block'//define o display como block para o modal ser exibido.
+                })
+            }
+        </script>
+    </body>
+</html>

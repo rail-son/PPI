@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Galeria</title>
+		<style>
+			body{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 14px;
+				text-align: center;
+				background:  #6c615b;
+				color: #fbc78e;
+			}
+			hr{
+				border: 1px solid #fbc78e;
+			}
+			header{
+				padding: 15px;
+				
+			}
+			h1{
+				font-size: 35px;
+			}
+			h2{
+				font-size: 25px;
+			}
+			nav{
+				padding: 15px;
+			}
+			nav > ul > li { 
+				display: inline; 
+				padding: 5px;
+
+			}
+			nav > ul > li > a {
+				display: inline-block;
+				text-decoration: none;
+				color: #6c615b;
+				border: 1px solid #fbc78e;
+				border-radius: 10px;
+				background-color: #fbc78e;
+				padding: 5px;
+			}
+			a:hover{
+				color: #fbc78e;
+				border: 1px solid #fbc78e;
+				border-radius: 10px;
+				background-color: #6c615b;
+				padding: 5px;
+			}
+			img{
+				border: 0.5px solid #6c615b;
+				border-radius: 10px;
+				margin: 5px;
+				width: 570px; 
+				height: 390px;
+			}
+			img:hover{
+				border: 0.5px solid #fbc78e;
+			}
+			figcaption{
+				color: #6c615b;
+				font-size: 20px;
+				padding: 10px;
+				background-color: #fbc78e;
+				border: 0.5px solid black;
+				border-radius: 20px;
+			}
+			iframe {
+				border: 0.5px solid #fbc78e;
+				border-radius: 10px;
+				width: 700px; 
+				height: 390px;
+				margin-top: 50px;
+			}
+			table{
+				border-bottom: 2px solid #fbc78e;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>Galeria</h1>
+		</header>
+		<nav>
+			<hr>
+			<h2>Menu de Navegação</h2>
+			<ul>
+					<li><a href="index.html">INÍCIO</a></li>
+					<li><a href="contato.html">CONTATO</a></li>
+			</ul>
+		</nav>
+		<main>
+			<section>
+				<hr>
+				<h2>Lugares para Viajar:</h2>
+				<table>
+				<tr> <!-- Criar Linha da tabela -->
+					<td> <!-- Criar Coluna da tabela -->
+						<figure>
+							<img src="../images/1.jpg" alt="Nova York - Estados Unidos"
+							width = "270" height = "160"
+							title = "Nova York - Estados Unidos">
+							<figcaption>Nova York - Estados Unidos.</figcaption>
+							</figure>
+					</td> <!-- Encerra primeira coluna -->
+					<td> <!-- Adiciona outra coluna -->
+						<figure>
+							<img src="../images/2.jpg" alt="Vancouver - Canada"
+							width="270" height="160"
+							title="Vancouver - Canada">
+							<figcaption>Vancouver - Canadá.</figcaption>
+						</figure>
+					</td><!-- Encerra primeira coluna -->
+				</tr><!-- Encerra primeira linha -->
+				<tr><!-- Adiciona outra linha(2°)-->
+					<td><!-- Adiciona conteúdo na 1° coluna -->
+						<figure><img src="../images/3.jpg" alt="Porto - Portugal"
+							width="270" height="160"
+							title="Porto - Portugal">
+							<figcaption>Porto - Portugal.</figcaption>
+						</figure>
+					</td><!-- Encerra primeira coluna -->
+					<td><!-- Adiciona conteúdo na 2° coluna -->
+						<figure>
+							<img src="../images/4.jpg" alt="Machu Picchu - Peru"
+							width="270" height="160"
+							title="Machu Picchu - Peru">
+						<figcaption>Machu Picchu - Peru.</figcaption>
+						</figure>
+					</td><!--Encerra segunda coluna -->
+				</tr> <!--Encerra Segunda linha -->
+				<tr><!-- Adiciona outra linha(3°) -->
+					<td>
+						<figure>
+							<img src="../images/5.jpg" alt="Londres - Inglaterra."
+							width="270" height="160"
+							title="Londres - Inglaterra.">
+							<figcaption>Londres - Inglaterra.</figcaption>
+						</figure>
+					</td>
+					<td>
+						<figure>
+							<img src="../images/6.jpg" alt="Paris - França."
+							width="270" height="160"
+							title="Paris - França.">
+							<figcaption>Paris - França.</figcaption>
+						</figure>
+					</td>
+				</tr><!-- Encerra Terceira linha -->
+			</table>
+			<iframe width = "550" height = "300" 
+				src="https://youtube.com/embed/y4BdBxY6UkI" 
+				allow="acclerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen>
+				</iframe>
+			</section>
+		</main>
+		<footer><p>Copyright © 2021 - Todos os direitos reservados.</p>
+			</footer>
+	</body>
+	</html>

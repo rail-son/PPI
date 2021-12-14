@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 3</title>
+        <style>
+            *{margin: 0}
+            body
+            {
+                font-family: 'Times New Roman', Times, serif;
+                background-color: rgb(226, 226, 226);
+            }
+
+            header
+            {
+                background-color: rgb(29, 29, 29);
+                color: #dddddd;
+                text-align: center; 
+                padding: 15px;
+                width: 100%; 
+                font-size: 20px;
+            }
+
+            main 
+            {
+                font-size: 16px;
+                background-color: white;
+                border: 0.5px solid rgb(126, 126, 126);
+                margin: 5px auto; 
+                width: 470px;     
+                padding: 25px;
+                box-shadow: 0.5px 0.5px 0 rgb(117, 117, 117); 
+                    
+            }
+            
+            nav
+            {
+                background-color: rgb(255, 255, 255);
+                text-align: center;
+                box-shadow: 0 1px 0 rgb(117, 117, 117);
+            }
+            
+            nav > ul > li 
+            { 
+                display: inline; 
+                padding: 0;
+            }
+
+            h2
+            {
+                color: rgb(0, 0, 148);
+                font-size: 26px;
+            }
+
+            p
+            {
+                padding-top: 20px;
+            }
+
+            nav button
+            {
+                font-size: 12px;
+                border: none;
+                outline: none;
+                padding: 0 10px;
+                background-color: inherit;
+                height: 30px;
+                margin: 0;
+            }
+
+            nav button:hover
+            {
+                color: blue;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            button.botaoAtivo
+            {
+                font-weight: bold;
+                color: blue;
+            }
+
+            .abas section
+            {
+                display: none;
+            }
+
+            section.abaAtivada
+            {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <section>
+                <h1>Faculdade de computação</h1>
+            </section>
+        </header>
+        <nav>
+            <!--ao colocar <section> entre a lista, dentro de <nav>, o site validator retornou warning, verificar com o professor-->
+            <ul>
+                <li><button>Sistemas de Informação</button>|</li>
+                <li><button>Ciência de Informação</button>|</li>
+                <li><button>Mestrado</button>|</li>
+                <li><button>Doutorado</button></li>
+            </ul>
+        </nav>
+    <main>
+        
+        <div class="abas">
+            <section>
+                <h2>Bacharelado em Sistemas de Informação</h2>
+                <p>O Curso de Bacharelado em Sistemas de Informação foi criado no ano de 2009 
+                    e teve o seu reconhecimento em 31 de Maio de 2013 por meio da Portaria 
+                    248/13 do Ministério da Educação.</p>
+                <p>O Objetivo do Curso é preparar profissionais com sólida e ampla formação 
+                    técnica na área de tecnologia da informação aplicada às organizações; 
+                    Desenvolver discentes empreendedores, capazes de projetar, implementar 
+                    e gerenciar a infraestrutura de tecnlogia da informação envolvendo 
+                    computadores, comunicação e dados em sistemas organizacionais; Consolidar 
+                    um profissional cidadão, com competências - conhecimentos, habilidades 
+                    e atitudes - e com responsabilidade social, capaz de respeitar as diferenças 
+                    individuais, saber produzir e usar a tecnologia em benefício da sociedade 
+                    e com visão sistêmica de negócios.</p>
+            </section>
+            <section>
+                <h2>Bacharelado em Ciência da Computação</h2>
+                <p>O Curso de Bacharelado em Ciência da Computação é o marco inicial da Faculdade 
+                    de Computação. Foi criado em 1988 e teve o seu reconhecimento em 11 de fevereiro 
+                    de 1993 por meio da Portaria 181/93 do MEC. O objetivo do Curso é formar 
+                    profissionais da área de Informática com competência no desenvolvimento 
+                    de software, atendendo adequadamente as exigências de mercado de trabalho, 
+                    além de capacitar o egresso a concluir com sucesso programas de pós-graduação.</p>
+                <p>Os egressos do curso têm obtido grande êxito na realização profissional, 
+                    destacando, um considerável número de empresas pertencentes à ex-alunos 
+                    do curso; um grande número de alunos que ingressam em consolidados 
+                    cursos de pós-graduação no país e exterior; atuação significativa 
+                    de nossos ex-alunos em atividades de ensino e pesquisa em instituições 
+                    de ensino de nível superior; e outros tantos que atuam em grandes 
+                    empresas nacionais e multinacionais.</p>
+            </section>
+            <section>
+                <h2>Mestrado em Ciência da Computação</h2>
+                <p>Lorem ipsum orci vitae torquent pellentesque vitae euismod senectus volutpat, 
+                    vestibulum inceptos vel facilisis ullamcorper convallis consequat. 
+                    ipsum nulla donec semper ligula ad turpis semper sem, bibendum aptent sed
+                    est odio diam felis lobortis pharetra?</p>
+                <p>Lorem ipsum orci vitae torquent pellentesque vitae euismod senectus volutpat, 
+                    vestibulum inceptos vel facilisis ullamcorper convallis consequat. 
+                    ipsum nulla donec semper ligula ad turpis semper sem, bibendum aptent sed
+                    est odio diam felis lobortis pharetra?</p>
+                <p>Lorem ipsum orci vitae torquent pellentesque vitae euismod senectus volutpat, 
+                    vestibulum inceptos vel facilisis ullamcorper convallis consequat. 
+                    ipsum nulla donec semper ligula ad turpis semper sem, bibendum aptent sed
+                    est odio diam felis lobortis pharetra?</p>
+            </section>
+            <section>
+                <h2>Doutorado em Ciência da Computação</h2>
+                <p>Lorem ipsum orci vitae torquent pellentesque vitae euismod senectus volutpat, 
+                    vestibulum inceptos vel facilisis ullamcorper convallis consequat. 
+                    ipsum nulla donec semper ligula ad turpis semper sem, bibendum aptent sed
+                    est odio diam felis lobortis pharetra?</p>
+                <p>Lorem ipsum orci vitae torquent pellentesque vitae euismod senectus volutpat, 
+                    vestibulum inceptos vel facilisis ullamcorper convallis consequat. 
+                    ipsum nulla donec semper ligula ad turpis semper sem, bibendum aptent sed
+                    est odio diam felis lobortis pharetra?</p>
+                <p>Lorem ipsum orci vitae torquent pellentesque vitae euismod senectus volutpat, 
+                    vestibulum inceptos vel facilisis ullamcorper convallis consequat. 
+                    ipsum nulla donec semper ligula ad turpis semper sem, bibendum aptent sed
+                    est odio diam felis lobortis pharetra?</p>
+            </section>
+        </div>
+    </main>
+        <script>
+            window.onload = function ()//ao iniciar o site executa a função anônima abaixo
+            {
+                buttons = document.querySelectorAll("nav button") //seleciona todos os botões de que estão em nav 
+                for (let button of buttons){ //declara a variável button e percorre os botões selecionados
+                    button.addEventListener("click", mudarAba) //adiciona o evento ao clicar no botão e direciona para a função mudarAba caso clique
+                }
+                abrirAba(0) //executa a função abrirAba com o parametro 0, na função irá retornar ao primeiro botão de nav.
+            }
+
+            function mudarAba(e) //Definição da função "mudarAba"
+            {
+                const botaoAcionado = e.target // a variavel botaoAcionado recebe o resultado do evento click e informa qual botão foi clicado.
+                const liDoBotao = botaoAcionado.parentNode //retorna o elemento pai, o nó LI
+                const nodes = Array.from(liDoBotao.parentNode.children)  //retorna os elementos filhos do nó ul para um vetor
+                const index = nodes.indexOf(liDoBotao) //retorna a posição do Li que disparou o evento
+                abrirAba(index) //executa a função abrirAba com o parametro index que informa a posição do li.
+            }
+
+            function abrirAba(i) //Definição da função "abrirAba"
+            {
+                const abaAtivada = document.querySelector(".abaAtivada") //seleciona a classe "abaAtivada"
+                if (abaAtivada !== null) //caso for diferente de null vai ser executada a condição, caso for executado a primeira vez, a condição não será executada
+                    abaAtivada.className = "" //a classe é retirada do section que está
+
+                const botaoAtivo = document.querySelector(".botaoAtivo") //seleciona a classe "botaoAtivo"
+                if(botaoAtivo !== null) //caso for diferente de null vai ser executada a condição, caso for executado a primeira vez, a condição não será executada
+                    botaoAtivo.className = "" //a classe é retirada do button que está
+
+                document.querySelectorAll(".abas section")[i].className = "abaAtivada" //adiciona a classe abaAtivada ao section que tem o valor do parâmetro i.
+                document.querySelectorAll("nav button")[i].className = "botaoAtivo" //adiciona a classe botaoAtivo ao button que tem o valor do parêmetro i.
+            }
+
+        </script>
+    </body>
+</html>

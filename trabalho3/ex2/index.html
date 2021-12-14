@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 2</title>
+        <style>
+            body
+            {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 20px;
+                line-height: 2rem;
+                margin: 15px;
+            }
+
+            main
+            {
+                background-color: #eee;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 0.5px solid #aaa;
+                border-radius: 8px;
+                padding: 20px 40px;
+                width: 300px;
+                outline: none;
+                max-height: 80%;
+                overflow: auto;
+            }
+
+            div
+            {
+                text-align: center;
+            }
+
+            li
+            {
+                background-color: rgb(189, 217, 240);
+                width: 70%;
+                margin: 3px;
+                padding: 5px 10px 5px 20px;
+                border: 0.5px solid rgb(70, 67, 212);
+                border-radius: 3px;
+            }
+
+            li > button
+            {
+                font-size: smaller;
+                float: right;
+                color: red;
+                border: none;
+                background-color: rgb(189, 217, 240);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+        <div>
+            <label for="interesse">Interesse:</label>
+            <input type="text" id="interesse" name="interesse">
+        </div>
+
+        <ol>
+        </ol>
+    </main>
+        <script>
+            window.onload = function(){ //ao iniciar o site executa a função anônima abaixo
+                const campoInteresse = document.querySelector("#interesse") //o primeiro elemento no documento com o ID "interesse" é retornado
+                campoInteresse.addEventListener("keyup", e => { //adiciona o evento e executa a função anônima com o parametro informado
+                    if (e.key === "Enter") //caso a tecla digitada seja a tecla Enter, será iniciado a condição abaixo
+                        adicionaInteresse(); //chama a função adicionaInteresse
+                })
+            }
+
+            function adicionaInteresse(){ //Definição da função "adicionaInteresse"
+                const campoInteresse = document.querySelector("#interesse") //o primeiro elemento no documento com o ID "interesse" é retornado para a variável "campoInteresse"
+                const listaInteresses = document.querySelector("ol") //retorna o nó da lista ol para a variável "listaInteresses"
+
+                const novoLi = document.createElement("li") //variável novoLi recebe a criação do novo elemento/nó na estrutura DOM, elemento li.
+                const novoSpan = document.createElement("span") //variável novoSpan recebe a criação novo elemento/nó na estrutura DOM, elemento span. 
+                const novoBotao = document.createElement("button") //variável novoBotao recebe a criação novo elemento/nó na estrutura DOM, elemento button. 
+
+                novoSpan.textContent = campoInteresse.value //define o valor do Span colocando o valor do campoInteresse.
+                novoBotao.textContent = '✖' //define o valor do botão mudando o texto para ✖.
+
+                novoLi.appendChild(novoSpan) //adiciona o elemento "novoSpan" como filho do "novoLi"
+                novoLi.appendChild(novoBotao) //adiciona o elemento "novoBotao" como filho do "novoLi"
+                listaInteresses.appendChild(novoLi) //adiciona o "novoLi" na "listaInteresses"
+
+                novoBotao.onclick = function () { //adiciona o evento "onclick" no "novoBotao" e executa a função anônima
+                    listaInteresses.removeChild(novoLi) //remove o li da listaInteresses.
+                }
+                campoInteresse.value = '' //definir o valor do campo interesse sem nenhuma informação, após incluir o interesse e apertar enter.
+            }
+        </script>
+    </body>
+</html>

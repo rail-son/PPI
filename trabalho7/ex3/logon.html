@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 3</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" 
+            crossorigin="anonymous">
+        <style>
+            *{margin: 0; padding: 0;}
+            body{
+                background-color: #eeeeee;
+            }
+            .login{
+                font-family: Georgia;
+                width: 50%;
+                padding: 20px;
+                background-color: white;
+                border: 0.8px solid #aaa;
+                border-radius: 10px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }                
+            input{
+                display: block;
+                margin: 8px 0 15px;
+                padding: 8px;
+                width: 90%;
+                border: 0.5px solid #888;
+                border-radius: 4px;            
+            }
+            input:focus {
+                border: 0.5px solid greenyellow;
+                box-shadow: 0px 0px 5px green;
+                outline: none;
+            }
+            #loginIncorreto{
+                display: none;
+                color: red;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+        <div class="login">
+            <form autocomplete="off">
+                
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha">
+                </div>
+                <div>
+                    <button id = "btn" type="button" class="btn btn-primary">Entrar</button>
+                    <a href="index.html" class = "m-3">Menu de opções</a>
+                </div>
+                <div>
+                    <p id="loginIncorreto">Usuário ou Senha inválido(s). Tente novamente.</p>
+                </div>
+            </form>
+        </div>
+        </main>
+        <script>
+            
+            function enviar(){
+
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST", "login.php");
+
+                xhr.onload = function () {
+                if (xhr.status != 200) {
+                    console.error("Falha inesperada: " + xhr.responseText);
+                    return;
+                }
+
+                try {
+                    var response = JSON.parse(xhr.responseText);
+                }
+                catch (e) {
+                    console.error("String JSON inválida: " + xhr.responseText);
+                    return;
+                }
+
+                if (response.success)
+                    window.location = response.destination;
+                else {
+                    document.querySelector("#loginIncorreto").style.display = 'block';
+                    form.senha.value = "";
+                    form.senha.focus();
+                }
+                }
+
+                xhr.onerror = function () {
+                    console.error("Erro de rede");
+                };
+
+                const form = document.querySelector("form");
+                xhr.send(new FormData(form));
+
+            }
+            window.onload = function(){
+                const btn = document.querySelector("#btn");
+                btn.onclick = enviar;
+            }
+        </script>
+    </body>
+</html>

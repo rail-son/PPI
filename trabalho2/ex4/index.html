@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Página Principal</title>
+		<meta name="description" content="Currículo Vitae - Site voltado para estudo da linguagem HTML na disciplina de Programação para internet. ">
+		<style>
+			/* Corpo do arquivo*/
+			body{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 14px; 
+				text-align: center;
+				background:  #fbc78e;
+				color: #6c615b;
+			}
+			/*Configurações da foto*/
+			td > figure{
+				margin-top: 10px;
+                border: 2px solid #6c615b;
+				color: #6c615b;;
+                position: absolute;
+                left: 70%;
+                transform: translateX(-70%);
+			}
+			/* Configurações do nome*/
+			h1{
+				margin-top: 40px;
+				color: #fbc78e;
+                padding: 20px;
+                background-color: #6c615b;
+                border: 0.8px solid #fbc78e;
+                border-radius: 10px;
+                position: absolute;
+                left: 30%;
+				top: 5%;
+                transform: translateX(-30%);
+				transform: translateY(-5%);
+				}
+			/*Configurações da linha de separação*/
+			hr{
+				border: 1px solid #6c615b;
+			}
+			/*Configurações do Menu*/
+			nav{
+				display: block;
+				margin-top: 200px;
+				padding: 15px;
+				position: static;
+			}
+			/*Configurações da lista do menu*/
+			nav > ul > li { 
+				display: inline; 
+				padding: 5px;
+			} 
+			/*Configurações das sessões do arquivo*/
+			section{
+				text-align: left;
+				display: block;
+				padding: 15px;
+				position: static;
+				width: 100%;
+			}
+			/*Centralização da parte de "Dados pessoais"*/
+			.centraliza{
+				text-align: center;
+			}
+			/*Configuração da classe dados para colocar em horizontalmente alinhados*/
+			.dados > li{
+				display: inline-table;
+				padding: 5px;
+			}
+			/*Configurações dos hyperlinks*/
+			a {
+				display: inline-block;
+				text-decoration: none;
+				color: #fbc78e;
+				border: 1px solid #6c615b;
+				border-radius: 10px;
+				background-color: #6c615b;
+				padding: 5px;
+				margin: 5px;
+			}
+			/*Configuração da action ao passar o mouse pelos links*/
+			a:hover{
+				color: #6c615b;
+				border: 1px solid #6c615b;
+				border-radius: 10px;
+				background-color: #fbc78e;
+				padding: 5px;
+			}
+			/*Borda Mapa*/
+			iframe{
+				border: 2px solid #6c615b;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<!-- Cabeçalho -->
+		<header>
+			<table>
+				<tr>
+					<td>
+						<h1>Railson Beltrano Ribeiro</h1>
+					</td>
+					<td>
+						<figure>
+						<img src="../images/foto.jpg" alt="foto"
+						width="175" height="188"
+						title="Foto 3x4">
+						<figcaption>Foto 3x4</figcaption>
+						</figure>
+					</td>
+				</tr>
+				</table>
+		</header>
+		<!-- Menu de navegação -->
+		<nav>
+			<hr>
+			<h2>Menu de Navegação</h2>
+			<ul>
+					<li><a href="galeria.html">GALERIA</a></li>
+					<li><a href="contato.html">CONTATO</a></li>
+			</ul>
+		</nav>
+		<!-- Conteúdo principal -->
+		<main>
+			<hr>
+			<section class="centraliza"> 
+				<h2>Dados pessoais</h2>
+					<ul class="dados">
+						<li><p><b>Email: </b><a href="mailto:railson123@email.com">railson123@email.com</a></p></li>
+						<li><p><b>Telefone: </b><a href="tel:99-98765-4321">(99)987654321</a> </p></li>
+						<li><p><b>Linkedin: </b><a href="https://www.linkedin.com/in/fake123lnkd/" target="_blank">linkedin.com/in/fake123lnkd</a></p></li>
+					</ul>
+				<hr>
+			</section>
+			<section>
+				<h2>Formação Acadêmica</h2>
+					<p><b>Bacharelado em Engenharia de Software</b></p>
+					<p>Universidade Federal de Uberlândia /2015 - 2019</p>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.291821780093!2d-48.26036498510131!3d-18.918472987178504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a44574c062bad3%3A0x656d242f316ee167!2sUniversidade%20Federal%20de%20Uberl%C3%A2ndia!5e0!3m2!1spt-BR!2sbr!4v1615156071518!5m2!1spt-BR!2sbr" width="600" height="450" allowfullscreen=""></iframe>
+				<hr>
+			</section>
+			<section>
+				<h2>Experiência Profissional</h2>
+					<p>Jun 2020 - Set 2020 - <b>Estagiário</b> - Google LLC</p>
+						<ul>
+							<li>Prestava suporte ao usuário.</li>
+							<li>Atuava na administração do banco de dados.</li>
+							<li>Elaboração de relatórios da área de TI. </li>
+						</ul>
+					<h3>Cursos Complementares</h3>
+						<p>Cursos disponibilizados pela <abbr title="Universidade Federal de Uberlândia">UFU</abbr>. (2015 - 2020).</p>
+					<ul>
+						<li>Pacote Office.
+							<ol>
+							<li>Word.</li>
+							<li>Excel.</li>
+							<li>Power Point.</li>
+						</ol></li>
+						<li>Robótica.</li>
+						<li>Programação.
+							<ul>
+								<li>C.</li>
+								<li>C++.</li>
+								<li>C#.</li>
+								<li>Python.</li>
+								<li>Banco de Dados.</li>
+							</ul>
+						</li>
+					</ul>
+				<h3>Competências e habilidades.</h3>
+					<ul>
+						<li><p>Trabalho em equipe, adquirida após trabalhar como estágiário na empresa <cite>Google</cite>.</p></li>
+						<li><p>Inglês avançado, adquirida após me formar na Fundação <cite>Fisk</cite>.</p></li>
+					</ul>
+			</section>
+		</main>
+			<!-- Rodapé -->
+			<footer>
+			<hr>
+			<h2>Informações de contato</h2>
+				<address>
+				<b>Entre em contato:</b><br>
+						<a href="mailto:railson123@email.com">railson123@email.com</a><br>
+						<a href="tel:99-98765-4321">(99) 987654321</a><br>
+						<hr><b>Se preferir, visite-me:</b><br>
+						Rua do São Nunca, 1234, casa-2, Bairro Sempre Bom<br>
+						Uberlândia, MG - CEP 38123-123  <br>
+				</address>
+			<hr>
+			<p>Copyright © 2021 - Todos os direitos reservados.</p>
+			</footer>
+	</body>
+</html>
